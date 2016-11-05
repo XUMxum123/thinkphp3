@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?><div style="height:20px;background-color:#F00">亚洲杯比赛</div>

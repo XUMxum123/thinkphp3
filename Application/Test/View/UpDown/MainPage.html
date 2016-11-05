@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MainPage</title>
+<script type="text/javascript" src="__PUBLIC__/Test/JsFile/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+  var Upload = "{:U('UpDown/Upload')}";
+  var Download = "{:U('UpDown/Download')}";
+  $filename = "E:/weixinweixin/wamp/www/Think/Uploads/UpDown/Upload/IMG_0595.JPG";
+  $(document).ready(function(){
+	  
+  })
+</script>
+</head>
+<body>
+    <form action="{:U('UpDown/Upload')}" enctype="multipart/form-data" method="post">
+        <input type="text" name="filename" value="" />
+        <input type="file" name="file" value="" /><br />
+        <input type="submit" value="提交" />
+    </form>
+    <form action="{:U('UpDown/Download')}" method="post">
+        <input type="submit" id="download" value="下载" />
+    </form>
+    
+
+    <div id="success"></div>
+</body>
+</html>

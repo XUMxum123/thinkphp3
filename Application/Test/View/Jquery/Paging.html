@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Paging</title>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Test/CssFile/Jquery.css" />
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Test/CssFile/page.css" />
+</head>
+<body>
+    <table id="team">
+      <tr class="head">
+          <th>队徽</th>
+          <th>名字</th>
+          <th>联盟</th>
+          <th>分区</th>    
+      </tr>
+      <volist name="list" id="vo">
+         <tr>
+           <td class="team_logo"><img src="{$vo[NBA_LOGO]}" /></td>
+           <td class="team_name">{$vo[NBA_NAME]}</td>
+           <td class="team_alliance">{$vo[NBA_ALLIANCE]}</td>
+           <td class="team_partition">{$vo[NBA_PARTITION]}</td>
+         </tr>
+      </volist>
+      <tr>
+          <td colspan="4" align="center"><div class="viciao">{$page}</div></td><!-- 样式值得注意 -->
+      </tr>
+    </table>
+    <!-- 分页样式首先写成正如上面的形式  <div class="xxx">{$page}</div>  然后到page.css找对应的class类名就行 如digg yahoo等div.xxx类的css -->
+</body>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maincontent>         
+<Subcontent>
+	<FromUserName>12345</FromUserName>
+	<CreateTime>56789</CreateTime>
+	<MsgType>text</MsgType>
+	<Content>合肥国际分工</Content>
+</Subcontent>
+<Subcontent>
+	<FromUserName>37125</FromUserName>
+	<CreateTime>34589</CreateTime>
+	<MsgType>text</MsgType>
+	<Content>两个公会</Content>
+</Subcontent>
+<Subcontent>
+	<FromUserName>69135</FromUserName>
+	<CreateTime>08689</CreateTime>
+	<MsgType>text</MsgType>
+	<Content>我才参考</Content>
+</Subcontent>
+<Subcontent>
+	<FromUserName>70345</FromUserName>
+	<CreateTime>12589</CreateTime>
+	<MsgType>text</MsgType>
+	<Content>看到发</Content>
+</Subcontent>
+<Subcontent>
+	<FromUserName>47345</FromUserName>
+	<CreateTime>5123</CreateTime>
+	<MsgType>text</MsgType>
+	<Content>不会的</Content>
+</Subcontent>
+<Subcontent>
+	<FromUserName>1234</FromUserName>
+	<CreateTime>457</CreateTime>
+	<MsgType>text</MsgType>
+	<Content>大家好</Content>
+</Subcontent>
+<Subcontent>
+		<FromUserName>1234</FromUserName>
+		<CreateTime>457</CreateTime>
+		<MsgType>text</MsgType>
+		<Content>大家好</Content>
+</Subcontent>
+</Maincontent>

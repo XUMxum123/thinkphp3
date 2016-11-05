@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>MainShow</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Content/mainshow/css/bootstrap.min.css">    
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Content/mainshow/css/style.css">    
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Content/mainshow/css/jquery.mobile.flatui.css" />
+    <script type="text/javascript" src="__PUBLIC__/Content/js/jquery-2.1.1.js"></script>
+    
+   
+
+    <style type="text/css">
+        a.user img {
+            height:40px;
+        }
+        .reply-content-box img{
+            //height:180px;
+        } 
+    </style>   
+</head>
+<body>
+<div data-role="page" class="container">
+    <div data-role="content" role="main">
+        <ul class="content-reply-box mg10">
+         <if condition="$count gt 1">   
+          <volist name="contents" id="vo">
+            <li class="odd" style="margin-bottom:0px;border:0px solid #F00;">
+                <a class="user" href="#">
+                    <img class="img-responsive avatar_" src="{$vo[DB_USER_HEADIMGURL]}" alt="">
+                    <span class="user-name" style="margin-left:-5px;">{$vo[DB_USER_NICKNAME]}</span>
+                </a>
+                <div class="reply-content-box">
+                	<span class="reply-time">{$vo[CREATETIME]}</span>
+                    <div class="reply-content pr" style="background-color:#ededed;box-shadow:0 0 1px #ececec;">
+                    	<span class="arrow">&nbsp;</span>
+                    	     <eq name="vo[MSGTYPE]" value="text">            
+                               {$vo[CONTENT]}
+                             </eq>
+                            <eq name="vo[MSGTYPE]" value="image">
+                               <img src="{$vo[PICURL]}" class="userimg"/>
+                            </eq> 
+                    </div>
+                </div>
+            </li>
+          </volist>  
+        </if>     
+        </ul>
+    </div>
+</div>
+       <script>
+          $(document).ready(function(){
+             $(".userimg").each(function(){
+                 var maxWidth = 150;
+                 var maxHeight = 150;
+                 var ratio = 0;
+                 var width = $(this).width();
+                 var height = $(this).height();
+                if((width > maxWidth) || (height > maxHeight)){
+                    if(width > maxWidth){
+                        ratio = maxWidth / width;
+                        $(this).css("width", maxWidth);
+                        $(this).css("height", height * ratio);
+                    }else if(height > maxHeight){
+                         ratio = maxHeight / height;
+                         $(this).css("height", maxHeight);
+                         $(this).css("width", width * ratio);
+                    }
+                }
+             })
+         })
+   </script> 
+</body>
+</html>

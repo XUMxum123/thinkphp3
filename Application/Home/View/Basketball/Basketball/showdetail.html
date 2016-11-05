@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>显示篮球详细信息</title>
+<link rel="stylesheet" href="__PUBLIC__/Basketball/basketball.css">
+</head>
+
+<body>
+<div>
+<table border="5px">
+<caption>{$name}</caption>
+<tr>
+<td>{CHINA_NAME}</td>
+<td>韩国</td>
+<td>日本</td>
+<td>澳大利亚</td>
+</tr>
+<tr>
+<td>{$arr[COUNTRY_NAME]}</td>
+<td>韩国</td>
+<td>日本</td>
+<td>澳大利亚</td>
+</tr>
+<tr>
+<td>中国</td>
+<td>韩国</td>
+<td>日本</td>
+<td>澳大利亚</td>
+</tr>
+<tr>
+<volist name="arr" id="arrs">
+<td>{$key}+{$arrs}</td>
+</volist>
+</tr>
+</table>
+
+<table border="5px">
+<volist name="arr1" id="vo1">
+
+<!--<td>{$key}</td>-->
+<volist name="vo1" id="vo2">
+<tr>
+<if condition="$key egt $title"><td>{$vo2}</td>
+<else /><td>{$vo2}+{$vo2}</td>
+</if>
+</tr>
+</volist>
+</volist>
+</table>
+
+</div>
+</body>
+</html>

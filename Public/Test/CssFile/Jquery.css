@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+
+table#main { border-collapse: collapse; text-align: center;width: 100%; }
+table#main td { border: 1px solid blue; }
+table#main tr.title td { font-size: 18px;font-weight: bolder; background-color: #6de; }
+table#main td.cont {background-color: #6ff;}
+
+table#team { border-collapse: collapse; text-align: center;width: 50%; }
+table#team td { border: 1px solid blue; }
+.team_logo img { width: 40px; height: 40px; text-align: center; }
+.team_name,.team_alliance,.team_partition { text-align: center; background-color: #3de; }
+tr.head th { border: 1px solid #f67; }
+.page { width: 100%; text-align: center; padding: 10px 0; clear: both; }
+.page a, .page .current { font-size: 12px; font-family:Arial;margin: 0 2px;
+       border: 1px solid #5FA623; background: #fff; padding: 2px 6px; text-decoration: none; }
+.page .current, .page a:hover { background: #7AB63F; color: #fff; }       
+
+.pages a,.pages span {
+    display:inline-block;
+    padding:2px 5px;
+    margin:0 1px;
+    border:1px solid #f0f0f0;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+}
+.pages a,.pages li {
+    display:inline-block;
+    list-style: none;
+    text-decoration:none; color:#58A0D3;
+}
+.pages a.first,.pages a.prev,.pages a.next,.pages a.end{
+    margin:0;
+}
+.pages a:hover{
+    border-color:#50A8E6;
+}
+.pages span.current{
+    background:#50A8E6;
+    color:#FFF;
+    font-weight:700;
+    border-color:#50A8E6;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta charset="UTF-8">
+  <title>Show</title>
+    <link rel="stylesheet" href="__PUBLIC__/Content/show/css/style.css" type="text/css" />
+    <script type="text/javascript" src="__PUBLIC__/Content/js/jquery-2.1.1.js"></script>
+    <!--
+        <style>
+        .border{width: 0; height: 0; border: .75em solid; border-color: #f00 #555 #ccc #000;}
+        .arrow-left{ width: 0;height: 0;border-top: 17px dashed transparent;border-bottom: 17px dashed transparent;border-right: 15px solid #777;font-sie: 0;}
+    </style>-->
+    <!--
+    <script type="text/javascript">
+        var ShowContent = "{:U('Content/ShowContent')}";
+        var TotalContent = "{:U('Content/TotalContent')}";
+        $(document).ready(function(){
+         $.ajax({
+           url:TotalContent,
+           success:function(response,status,xhr){
+               var nowcontent = $(response).filter("#nowcontent").val();
+               alert(nowcontent);
+//var countcontent = $("#countcontent").val();
+               //if(nowcontent != countcontent){
+                   //ShowContentInterval();
+               //}
+             }
+           })
+            //$.ajax({
+                //url:ShowContent,
+                //success:function(response,status,xhr){
+                 //document.write(response);   
+                 //alert(response);
+                //}
+            //})
+           //var con = $("#inner").load(ShowContent,"ul li").size();
+           //alert(con);
+       })
+
+    </script>    -->
+</head>
+<body>
+    <volist name="replyarray" id="vo">
+       <div>{$vo}</div>
+    </volist>    
+   <volist name="replyarray" id="vo">
+    <embed src="{$vo}" width="320" height="240" autostart=true loop=true>
+    </embed>
+   </volist> 
+    <!--
+    <video width="320" height="240" controls="controls">
+       <source src="{$url}" type="video/mp4" />
+</video>
+    
+    <img src="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/0.gif ">
+    
+    <div id="inner"></div>
+    <div class="arrow-left"></div>
+    -->
+<!--
+  <div id="convo" data-from="Sonu Joshi">  
+<ul class="chat-thread">
+	<li>Are we meeting today?</li>
+	<li>yes, what time suits you?</li>
+	<li>I was thinking after lunch, I have a meeting in the morning</li>
+  	<li>Are we meeting today?</li>
+	<li>yes, what time suits you?</li>
+	<li>I was thinking after lunch, I have a meeting in the morning</li>
+  	<li>Are we meeting today?</li>
+	<li>yes, what time suits you?</li>
+	<li>I was thinking after lunch, I have a meeting in the morning</li>
+  	<li>Are we meeting today?</li>
+	<li>yes, what time suits you?</li>
+	<li>I was thinking after lunch, I have a meeting in the morning</li>
+</ul>
+</div>
+<div style="text-align:center;clear:both">
+
+</div>
+    <!--
+<div class="credits">
+	<textarea id="msgcontent" class="msgcontent" ></textarea>
+	<button>发送</button>
+</div>
+
+  <script src='__PUBLIC__/Content/show/js/jquery.js'></script>
+-->
+
+
+
+</body>
+
+</html>

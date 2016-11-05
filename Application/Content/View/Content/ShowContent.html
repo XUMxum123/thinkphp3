@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no" />
+<title>ShowContent</title>
+<style type="text/css">
+    body {
+        background-color:#FFF;
+    }
+    *{margin:0px;padding:0px;}
+    .contimg {
+        width:100px;
+         background-color: rgba(25, 147, 147, 0.2);
+    }
+    .photo{
+        width:50px;
+        border-radius: 20px;
+    }
+    .tops {
+        padding: 10px;
+    }
+    .bottoms {
+     padding:8px;
+     border-radius: 10px;
+     background-color: rgba(25, 147, 147, 0.2);
+     width:auto;
+    }
+    .time{
+        padding:1px;
+     border-radius: 5px;
+     background-color: rgba(25, 147, 147, 0.2);
+    }
+    .cons {
+        padding:5px;
+        border-radius: 3px;
+        background-color: #c2dada;
+        word-break: break-word;
+    }
+    .arrow-left{ 
+            width: 0; 
+            height: 0; 
+            border-bottom: 5px solid transparent; /* left arrow slant */
+            border-top: 5px solid transparent; /* right arrow slant */
+            border-right: 25px solid #c2dada; /* bottom, add background color here */
+            font-size: 0;
+            line-height: 0;
+    }
+</style>    
+</head>
+
+<body>
+<div id="main">
+<table style="border-collapse:collapse;border:1px solid;width:99%;margin-top:5px;background-color:#FFF">
+    <volist name="content" id="vo">
+        <tr style="height:5px;">
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td valign="top" class="tops" style="width:52px;">
+               <span class="nickname" style="display:none;">{$vo[DB_USER_WECHATNICKNAME]}</span>
+               <img src="{$vo[DB_USER_HEADIMGURL]}" class="photo">
+            </td>
+            
+              <!--  
+                <div>
+                    <div><span class="time">{$vo[CREATETIME]}</span></div>
+               
+             <img src="__PUBLIC__/Content/images/arrow.jpg" style="width:60px;height:40px;">
+                   <td algn="right" valign="middle" style="padding-top:10px;"><span class="arrow-left"></span></td>--> 
+                  <eq name="vo[MSGTYPE]" value="text">
+                    <td align="left">
+                            <label>
+                              <span class="arrow-left"></span>
+                            </label>
+                            <label>
+                            <span class="cons">{$vo[CONTENT]}</span>
+                            </label>
+                    </td>
+                  </eq>
+                  <eq name="vo[MSGTYPE]" value="image">
+                    <td>
+                            <label>
+                            <span><img src="{$vo[PICURL]}" class="contimg"/></span>
+                            </label>
+                    </td>
+                  </eq>  
+              
+               <!-- </div>-->     
+       </tr> 
+    </volist>    
+</table>
+<div>
+</body>
+</html>

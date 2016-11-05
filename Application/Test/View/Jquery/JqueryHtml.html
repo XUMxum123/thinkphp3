@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JqueryHtml</title>
+<script type="text/javascript" src="__PUBLIC__/Test/JsFile/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Test/JsFile/Jquery.js"></script>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Test/CssFile/Jquery.css" />
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Test/CssFile/page.css" />
+<script type="text/javascript">
+   var Jquery = "{:U('Jquery/Jquery')}";
+   var InputInfor = "{:U('Jquery/InputInfor')}";
+   var InputData = "{:U('Jquery/InputData')}";
+   var DeleteData = "{:U('Jquery/DeleteData')}";
+</script>
+</head>
+<body>
+    <table id="main">
+    <caption style="font-size:20px;font-weight: bolder;">后台信息管理</caption>
+      <tr class="title">
+        <td></td><td>时间</td><td>地点</td><td>任务</td>
+      </tr>
+      <volist name="data" id="vo">
+      <tr class="content">
+        <td><input type="checkbox" class="checkbox" name="{$vo[MYID]}"/></td>
+        <td class="cont">{$vo[TIME]}</td>
+        <td class="cont">{$vo[SITE]}</td>
+        <td class="cont">{$vo[MISSION]}</td>
+      </tr>
+      </volist>
+    </table>
+    <table style="margin: 0 auto; border: 1px solid #a68;width: 100%;">
+       <tr><td colspan="4" style="text-align:center;"><div class="scott">{$page}</div></td></tr>
+    </table>
+    <table id="button" style="margin: 0 auto; border: 1px solid #a68;">
+       <tr>
+       <td><button id="selectAll">全部选中</button></td>
+       <td><button id="noselectAll">反选</button></td>
+       <td><button id="Delete">删除选中</button></td>
+       <td><input type="button" id="Add" value="增加" /></td>
+       <td><input type="button" id="Save" value="保存" /></td>
+       <td></td>
+       </tr>
+    </table>
+    <div id="in"></div>
+    <!-- 
+    <div style="width:100%;text-align:center;">----------------------------</div>
+    <div style="text-align:center;">NBA信息(待更新)</div>
+    <table id="team">
+      <tr>
+          <th>队徽</th>
+          <th>名字</th>    
+      </tr>
+      <volist name="datateam" id="vo">
+         <tr>
+           <td class="team_logo"><img src="{$vo[NBA_LOGO]}" /></td>
+           <td class="team_name">{$vo[NBA_NAME]}</td>
+         </tr>
+      </volist>
+    </table>
+     -->
+    <!--
+    ---------------------------------------------------------<br />
+        名字：<input type="text" id="name" value="" />
+        队徽：<input type="text" id="logo" value="" /><br />
+    <input type="button" id="savenl" value="保存信息" /><br />
+    <div id="suc"></div>
+    <img src="http://localhost/Think/Uploads/Jquery/灰熊.png" />
+    -->
+</body>
+</html>
