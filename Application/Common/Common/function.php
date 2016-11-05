@@ -5,6 +5,21 @@
  * @time 2016.04.25
  * */
 
+/*    nbateam table
+ */
+define("DB_NBATEAM_TAB", "nbateam");
+define("DB_NBATEAM_ID", "Id");
+define("DB_NBATEAM_NAME", "Name");
+define("DB_NBATEAM_LOGO", "Logo");
+define("DB_NBATEAM_WIN", "Win");
+define("DB_NBATEAM_LOSE", "Lose");
+define("DB_NBATEAM_RANK", "Rank");
+define("DB_NBATEAM_ALLIANCE", "Alliance");
+define("DB_NBATEAM_PLAYOFFS", "Playoffs");
+define("DB_NBATEAM_PARTITION", "Partition");
+
+
+
 /** Generates an UUID
  * @param string  an optional prefix
  * @return string  the formatted uuid

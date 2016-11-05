@@ -6,7 +6,7 @@
  * 
  * */
 
-// mydatabase table define  ---xumeng
+/* // mydatabase table define  ---xumeng
 define('MYDATABASE',     'mydatabase');
 define('MYID',     'Id');
 define('TIME',     'Time');
@@ -31,7 +31,7 @@ define('SUBCONTENT',     'Subcontent');
 define('FROMUSERTIME',     'FromUserName');
 define('CREATTIME',     'CreateTime');
 define('MSGTYPE',     'MsgType');
-define('CONTENT',     'Content');
+define('CONTENT',     'Content'); */
 
 
 

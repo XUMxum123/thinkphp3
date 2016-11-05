@@ -5,7 +5,7 @@ use Think\Controller;
 class JqueryController extends Controller{
 	  
 	public function Jquery(){
-		$mydatabase = D(MYDATABASE);
+		$mydatabase = D(DB_NBATEAM_TAB);
 		//$nbateam = D(NBA_TEAM);
 		//$data = $mydatabase->get_all_information();
 		//$datateam = $nbateam->get_team_information();
