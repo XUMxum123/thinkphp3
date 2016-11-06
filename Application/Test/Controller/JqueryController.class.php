@@ -5,7 +5,7 @@ use Think\Controller;
 class JqueryController extends Controller{
 	  
 	public function Jquery(){
-		$mydatabase = D(DB_NBATEAM_TAB);
+		$mydatabase = D(MYDATABASE);
 		//$nbateam = D(NBA_TEAM);
 		//$data = $mydatabase->get_all_information();
 		//$datateam = $nbateam->get_team_information();
@@ -92,9 +92,9 @@ class JqueryController extends Controller{
 	public function Paging(){
 		header("Content-type:text/html;charset=utf-8");
 		import('ORG.Util.Page'); // 导入分页类
-		$nbateam = D(NBA_TEAM);
+		$nbateam = D(DB_NBATEAM_TAB);
 		$count = $nbateam->count(); // 查询满足要求的总记录数
-		$rollPage = 2; //每页显示的条数
+		$rollPage = 1; //每页显示的条数
 		$Page = new \Think\Page($count,$rollPage); // 实例化分页类 传入总记录数和每页显示的记录数
 		$Page->setConfig('header','共<b>%TOTAL_ROW%</b>条记录 第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页');
 		$Page->lastSuffix = false; //最后一页不显示为总页数
@@ -105,7 +105,7 @@ class JqueryController extends Controller{
 		$Page->setConfig('theme','%FIRST%%UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
 		$show = $Page->show();// 分页显示输出
 		$limit = $Page->firstRow.','.$Page->listRows;
-		$field = array(NBA_ID,NBA_NAME,NBA_LOGO,NBA_PARTITION,NBA_ALLIANCE);
+		$field = array(DB_NBATEAM_ID,DB_NBATEAM_NAME,DB_NBATEAM_LOGO,DB_NBATEAM_PARTITION,DB_NBATEAM_ALLIANCE);
 		$list = $nbateam->limit($limit)->field($field)->select();
 		$this->assign("list",$list);// 赋值数据集
 		$this->assign('page',$show);// 赋值分页输出

@@ -16,14 +16,14 @@
       </tr>
       <volist name="list" id="vo">
          <tr>
-           <td class="team_logo"><img src="{$vo[NBA_LOGO]}" /></td>
-           <td class="team_name">{$vo[NBA_NAME]}</td>
-           <td class="team_alliance">{$vo[NBA_ALLIANCE]}</td>
-           <td class="team_partition">{$vo[NBA_PARTITION]}</td>
+           <td class="team_logo">   <img src="__PUBLIC__/Test/images/test.jpg" />        <!-- <img src="DB_NBATEAM_LOGO" />  暂时没有图片--></td>
+           <td class="team_name">{$vo[DB_NBATEAM_NAME]}</td>
+           <td class="team_alliance">{$vo[DB_NBATEAM_ALLIANCE]}</td>
+           <td class="team_partition">{$vo[DB_NBATEAM_PARTITION]}</td>
          </tr>
       </volist>
       <tr>
-          <td colspan="4" align="center"><div class="viciao">{$page}</div></td><!-- 样式值得注意 -->
+          <td colspan="4" align="center"><div class="technorati">{$page}</div></td><!-- 样式值得注意 -->
       </tr>
     </table>
     <!-- 分页样式首先写成正如上面的形式  <div class="xxx">{$page}</div>  然后到page.css找对应的class类名就行 如digg yahoo等div.xxx类的css -->

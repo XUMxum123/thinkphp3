@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>MainPage</title>
-<script type="text/javascript" src="/Think/Public/Test/JsFile/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="/thinkphp3/Public/Test/JsFile/jquery-1.11.3.js"></script>
 <script type="text/javascript">
   var Upload = "<?php echo U('UpDown/Upload');?>";
   var Download = "<?php echo U('UpDown/Download');?>";
   $filename = "E:/weixinweixin/wamp/www/Think/Uploads/UpDown/Upload/IMG_0595.JPG";
-   $(document).ready(function(){
-	  $("#download").click(function(){
-         
+  $(document).ready(function(){
+	  
   })
 </script>
 </head>

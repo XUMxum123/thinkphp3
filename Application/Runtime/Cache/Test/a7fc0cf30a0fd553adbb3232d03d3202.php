@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <title>JqueryHtml</title>
-<script type="text/javascript" src="/Think/Public/Test/JsFile/jquery-1.11.3.js"></script>
-<script type="text/javascript" src="/Think/Public/Test/JsFile/Jquery.js"></script>
-<link type="text/css" rel="stylesheet" href="/Think/Public/Test/CssFile/Jquery.css" />
-<link type="text/css" rel="stylesheet" href="/Think/Public/Test/CssFile/page.css" />
+<script type="text/javascript" src="/thinkphp3/Public/Test/JsFile/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="/thinkphp3/Public/Test/JsFile/Jquery.js"></script>
+<link type="text/css" rel="stylesheet" href="/thinkphp3/Public/Test/CssFile/Jquery.css" />
+<link type="text/css" rel="stylesheet" href="/thinkphp3/Public/Test/CssFile/page.css" />
 <script type="text/javascript">
    var Jquery = "<?php echo U('Jquery/Jquery');?>";
    var InputInfor = "<?php echo U('Jquery/InputInfor');?>";
